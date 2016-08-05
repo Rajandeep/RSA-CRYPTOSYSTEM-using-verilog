@@ -2,19 +2,22 @@
 `define UPDATING 3'd1
 `define CHECK 3'd2
 `define HOLDING 3'd3
+/*to calculate decryption key 'd' and encryption key 'e' we use extended euclidian algorithm  
+i.e                 d * e = 1 mod (phi)
+*/
 module inverter(
-    input [WIDTH-1:0] p,
-	input [WIDTH-1:0] q,
-	input clk,
-	input reset,
-	output finish,
-	output [WIDTH*2-1:0] e,
-	output [WIDTH*2-1:0] d
+    input [WIDTH-1:0] p,//prime number 1
+	input [WIDTH-1:0] q,//prime nu,ber 2
+	input clk,//system clock
+	input reset,//resets module
+	output finish,//indicates finish for operation
+	output [WIDTH*2-1:0] e,//encryption key
+	output [WIDTH*2-1:0] d//decryption key
     );
     
     parameter WIDTH = 32;
     
-    reg [WIDTH*2-1:0] totient_reg,a,b,y,y_prev;
+    reg [WIDTH*2-1:0] totient_reg,a,b,y,y_prev;//totient here represents phi
     reg [2:0] state;
     reg [WIDTH-1:0] e_reg;
     
@@ -26,9 +29,7 @@ module inverter(
     assign e = e_reg;
     assign d = y_prev;
     
-    //initial $monitor("a = %d b = %d y = %d state = %d  b_next = %d ",a,b,y,state,b_next);
-    
-    mod x_mod_y(a,b,b_next,quotient);
+    mod x_mod_y(a,b,b_next,quotient);//divider module
     defparam x_mod_y.WIDTH = WIDTH*2;
     
     always @(posedge clk) begin

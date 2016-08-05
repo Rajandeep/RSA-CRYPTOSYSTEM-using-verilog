@@ -16,7 +16,7 @@ module tb_main;
         clk = 0;
         reset =0; reset1=0;
         encrypt_decrypt = 0;
-        msg_in = 256'h00000000000000000000000000000000005de5d98773da289d6625bc1ebcbf74;
+        msg_in = 256'h0000000000000000000000000000000000262d806a3e18f03ab37b2857e7e149;
         #10 reset = 1;
         #10 reset = 0;
         #2980 $finish;

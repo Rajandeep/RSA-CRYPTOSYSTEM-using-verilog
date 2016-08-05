@@ -1,14 +1,16 @@
 `timescale 1ns / 1ps
 `define UPDATE 2'd1
 `define HOLD 2'd2
+/* to calculate *** a^b mod n *** we use right to left binary exponentiation (by .BRUCE SCHIENER)
+*/
 module mod_exp(
-    input [WIDTH*2-1:0] base,
-	input [WIDTH*2-1:0] modulo,
-	input [WIDTH*2-1:0] exponent,
-	input clk,
-	input reset,
-	output finish,
-	output [WIDTH*2-1:0] result
+    input [WIDTH*2-1:0] base,//base here represents (a) 
+	input [WIDTH*2-1:0] modulo,//modulo here is modulus (n)
+	input [WIDTH*2-1:0] exponent,//exponent here is the power of base (b)
+	input clk,//system clk
+	input reset,//resets module
+	output finish,//sends finish signal on completion
+    output [WIDTH*2-1:0] result
     );
     
     parameter WIDTH = 32;
@@ -25,15 +27,15 @@ module mod_exp(
     assign finish = (state == `HOLD) ? 1'b1:1'b0;
     assign result = result_reg;
     
-    mod base_squared_mod(base_squared,modulo_reg,base_next,);
-    defparam base_squared_mod.WIDTH = WIDTH*2;
-    
-    mod result_mul_base_mod (result_mul_base,modulo_reg,result_next,);
-    defparam result_mul_base_mod.WIDTH = WIDTH*2;
+    mod base_squared_mod(base_squared,modulo_reg,base_next,);                   //  implementation of 
+    defparam base_squared_mod.WIDTH = WIDTH*2;                                  //  right to left 
+                                                                                //  binary exponentiation  
+    mod result_mul_base_mod (result_mul_base,modulo_reg,result_next,);          //  by.
+    defparam result_mul_base_mod.WIDTH = WIDTH*2;                               //  BRUCE SCHIEMER
     
    
     always @(posedge clk) begin
-        if(reset) begin
+        if(reset) begin                                                         //initialisation of values
             base_reg <= base;
             modulo_reg <= modulo;
             exponent_reg <= exponent;                
