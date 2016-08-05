@@ -1,0 +1,27 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Dev-Verilog/RSA/RSA.srcs/sources_1/new/mod.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mod
+WARNING: [VRFC 10-756] identifier WIDTH is used before its declaration [D:/Dev-Verilog/RSA/RSA.srcs/sources_1/new/mod.v:4]
+WARNING: [VRFC 10-756] identifier WIDTH is used before its declaration [D:/Dev-Verilog/RSA/RSA.srcs/sources_1/new/mod.v:5]
+WARNING: [VRFC 10-756] identifier WIDTH is used before its declaration [D:/Dev-Verilog/RSA/RSA.srcs/sources_1/new/mod.v:6]
+WARNING: [VRFC 10-756] identifier WIDTH is used before its declaration [D:/Dev-Verilog/RSA/RSA.srcs/sources_1/new/mod.v:7]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Dev-Verilog/RSA/RSA.srcs/sources_1/new/mod_exp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mod_exp
+WARNING: [VRFC 10-756] identifier WIDTH is used before its declaration [D:/Dev-Verilog/RSA/RSA.srcs/sources_1/new/mod_exp.v:5]
+WARNING: [VRFC 10-756] identifier WIDTH is used before its declaration [D:/Dev-Verilog/RSA/RSA.srcs/sources_1/new/mod_exp.v:6]
+WARNING: [VRFC 10-756] identifier WIDTH is used before its declaration [D:/Dev-Verilog/RSA/RSA.srcs/sources_1/new/mod_exp.v:7]
+WARNING: [VRFC 10-756] identifier WIDTH is used before its declaration [D:/Dev-Verilog/RSA/RSA.srcs/sources_1/new/mod_exp.v:11]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Dev-Verilog/RSA/RSA.srcs/sources_1/new/inverter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module inverter
+WARNING: [VRFC 10-756] identifier WIDTH is used before its declaration [D:/Dev-Verilog/RSA/RSA.srcs/sources_1/new/inverter.v:6]
+WARNING: [VRFC 10-756] identifier WIDTH is used before its declaration [D:/Dev-Verilog/RSA/RSA.srcs/sources_1/new/inverter.v:7]
+WARNING: [VRFC 10-756] identifier WIDTH is used before its declaration [D:/Dev-Verilog/RSA/RSA.srcs/sources_1/new/inverter.v:11]
+WARNING: [VRFC 10-756] identifier WIDTH is used before its declaration [D:/Dev-Verilog/RSA/RSA.srcs/sources_1/new/inverter.v:12]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Dev-Verilog/RSA/RSA.srcs/sources_1/new/control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control
+WARNING: [VRFC 10-756] identifier WIDTH is used before its declaration [D:/Dev-Verilog/RSA/RSA.srcs/sources_1/new/control.v:3]
+WARNING: [VRFC 10-756] identifier WIDTH is used before its declaration [D:/Dev-Verilog/RSA/RSA.srcs/sources_1/new/control.v:8]
+WARNING: [VRFC 10-756] identifier WIDTH is used before its declaration [D:/Dev-Verilog/RSA/RSA.srcs/sources_1/new/control.v:9]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Dev-Verilog/RSA/RSA.srcs/sim_1/new/tb_main.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_main
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Dev-Verilog/RSA/RSA.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
